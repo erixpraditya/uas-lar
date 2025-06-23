@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flexy Free Bootstrap Admin Template by WrapPixel</title>
+  <title>@yield('title')</title>
   <link rel="shortcut icon" type="image/png" href="{{asset('/assets/images/logos/favicon.png')}}" />
   <link rel="stylesheet" href="{{asset('/assets/css/styles.min.css')}}" />
   <link rel="stylesheet" href="{{asset('/assets/css/all.css')}}">
@@ -151,16 +151,11 @@
         </nav>
       </header>
       <!--  Header End -->
-      <div class="body-wrapper-inner">
-        <div class="container-fluid">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title fw-semibold mb-4">Sample Page</h5>
-              <p class="mb-0">This is a sample page </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section class="content">
+
+        @yield('content')
+
+      </section>
     </div>
   </div>
   <script src="{{asset('/assets/libs/jquery/dist/jquery.min.js')}}"></script>

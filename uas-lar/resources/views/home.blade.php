@@ -1,4 +1,21 @@
-@extends('layouts.app')
+@extends('layouts.template')
+@section('title')
+    Halaman Dashboard
+@endsection
+
+@section('content')
+    <div class="body-wrapper-inner">
+            <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                <h5 class="card-title fw-semibold mb-4">Sample Page</h5>
+                <p class="mb-0">Hi Admin Semoga harimu menyenangkan </p>
+                </div>
+            </div>
+            </div>
+        </div>
+@endsection
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -20,4 +37,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}
