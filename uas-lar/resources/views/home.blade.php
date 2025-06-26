@@ -3,6 +3,10 @@
     Halaman Dashboard
 @endsection
 
+@section('headline')
+    Dashboard
+@endsection
+
 @section('content')
     <div class="body-wrapper-inner">
             <div class="container-fluid">

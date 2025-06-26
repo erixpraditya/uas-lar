@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\perpus;
 use Illuminate\Http\Request;
 
 class perpusController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $perpus = perpus::all();
+        return view('Perpus.index', compact('perpus'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.

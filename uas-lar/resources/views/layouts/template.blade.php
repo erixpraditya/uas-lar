@@ -44,7 +44,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="/dashboard" aria-expanded="false">
                 <i class="ti ti-atom"></i>
                 <span class="hide-menu">Dashboard</span>
               </a>
@@ -54,7 +54,7 @@
             <!-- ---------------------------------- -->
             <li class="sidebar-item">
               <a class="sidebar-link justify-content-between"
-                href="#" aria-expanded="false">
+                href="/perpus" aria-expanded="false">
                 <div class="d-flex align-items-center gap-3">
                   <span class="d-flex">
                     <i class="fa-solid fa-book"></i>
@@ -66,7 +66,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link justify-content-between"
-                href="#" aria-expanded="false">
+                href="/anggota" aria-expanded="false">
                 <div class="d-flex align-items-center gap-3">
                   <span class="d-flex">
                     <i class="fa-solid fa-users"></i>
@@ -77,7 +77,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link justify-content-between"
-                href="#" aria-expanded="false">
+                href="/peminjam" aria-expanded="false">
                 <div class="d-flex align-items-center gap-3">
                   <span class="d-flex">
                     <i class="ti ti-shopping-cart"></i>

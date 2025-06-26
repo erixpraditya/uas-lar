@@ -11,14 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('anggotas', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_anggota')->unique();;
-            $table->string('alamat',100);
-            $table->string('nohp',100);
-            $table->string('tgl_daftar',100);
+        Schema::create('perpuses', function (Blueprint $table) {
+            $table->id(); // ✅ BENAR (alias dari bigIncrements('id'))
+            $table->string('judul');
+            $table->string('penulis', 100);
+            $table->integer('tahunterbit');
+            $table->string('penerbit', 100);
+            $table->string('kategori', 100);
             $table->timestamps();
         });
+
     }
 
     /**
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('anggota');
+        Schema::dropIfExists('perpuses');
     }
 };
