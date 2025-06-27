@@ -8,16 +8,12 @@
 @endsection
 
 @section('content')
-    <div class="body-wrapper-inner">
-            <div class="container-fluid">
-            <div class="card">
+            <div class="card mt-5">
                 <div class="card-body">
                 <h5 class="card-title fw-semibold mb-4">Sample Page</h5>
                 <p class="mb-0">Hi Admin Semoga harimu menyenangkan </p>
                 </div>
             </div>
-            </div>
-        </div>
 @endsection
 {{-- @extends('layouts.app')
 

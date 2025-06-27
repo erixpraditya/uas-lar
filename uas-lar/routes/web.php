@@ -31,3 +31,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/perpus', [perpusController::class, 'index']);
+Route::get('/perpus/tambah', [perpusController::class, 'create']);
+Route::post('/perpus', [perpusController::class, 'store']);
+Route::get('/perpus/edit/{id}', [perpusController::class, 'edit'])->name('perpus.edit');
+Route::put('/perpus/{id}', [perpusController::class, 'update']);
+Route::delete('/perpus/{id}', [perpusController::class, 'destroy']);

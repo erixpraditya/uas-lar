@@ -157,24 +157,11 @@
         </nav>
       </header>
       <!--  Header End -->
-     <div class="content-wrapper">
-  <section>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-6">
-          <h1>@yield('headline')</h1>
-        </div>
-      </div>
+        <section class="content" style="margin-top:0px; padding-top:0px;">
+            @yield('content')
+        </section>
     </div>
-  </section>
-  <section class="content" style="margin-top:0px; padding-top:0px;">
-    @yield('content')
-  </section>
-</div>
-
-
-    </div>
-  </div>
   <script src="{{asset('/assets/libs/jquery/dist/jquery.min.js')}}"></script>
   <script src="{{asset('/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
   <script src="{{asset('/assets/js/sidebarmenu.js')}}"></script>
