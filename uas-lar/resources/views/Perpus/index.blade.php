@@ -3,35 +3,23 @@
 @section('title')
     Data Buku
 @endsection
-
-@section('headline')
-    Data Buku
-@endsection
-
 @section('content')
 <div class="card">
     <div class="card-header">
         <h3 class="card-title">
-            <a href="/dosen/tambah" class="btn btn-primary btn-sm"><i class="fa fa-user-plus"></i> Tambah Data Buku</a>
+            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-user-plus"></i> Tambah Data Buku </a>
         </h3>
-
-        <div class="card-tools">
-        <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-            <i class="fas fa-minus"></i>
-        </button>
-        <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-            <i class="fas fa-times"></i>
-        </button>
-        </div>
     </div>
     <div class="card-body">
         <table class="table">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">NIDN</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Email</th>
+                                <th scope="col">Judul</th>
+                                <th scope="col">Penulis</th>
+                                <th scope="col">Tahun Terbit</th>
+                                <th scope="col">Penerbit</th>
+                                <th scope="col">Kategori</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -39,9 +27,11 @@
                             @forelse ( $perpus as $data)
                                 <tr>
                                     <th scope="row">{{$nomor++}}</th>
-                                    <td>{{$data->nidn}}</td>
-                                    <td>{{$data->nama}}</td>
-                                    <td>{{$data->email}}</td>
+                                    <td>{{$data->judul}}</td>
+                                    <td>{{$data->penulis}}</td>
+                                    <td>{{$data->tahunterbit}}</td>
+                                    <td>{{$data->penerbit}}</td>
+                                    <td>{{$data->kategori}}</td>
                                     <td>
                                         <a href="" class="btn btn-warning btn-sm"><i class="fa fa-info"></i></a>
                                         <a href="/dosen/edit/{{$data->id}}" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
@@ -61,7 +51,7 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                Yakin Data Dosen a.n. {{$data->nama}} ingin dihapus?
+                                                Yakin Data Dosen a.n. {{$data->judul}} ingin dihapus?
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
