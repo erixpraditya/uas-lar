@@ -24,6 +24,7 @@ class anggotaController extends Controller
     public function create()
     {
         //
+        return view('Anggota.form');
     }
 
     /**
@@ -32,6 +33,14 @@ class anggotaController extends Controller
     public function store(Request $request)
     {
         //
+        $anggota = new Anggota;
+        $anggota->nama_anggota = $request->nama_anggota;
+        $anggota->alamat = $request->alamat;
+        $anggota->nohp = $request->nohp;
+        $anggota->tgl_daftar = $request->tgl_daftar;
+        $anggota->save();
+
+        return redirect('/anggota');
     }
 
     /**

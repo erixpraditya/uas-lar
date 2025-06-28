@@ -8,7 +8,7 @@
 <div class="card mt-5"> {{-- Tambah jarak ke bawah --}}
     <div class="card-header">
         <h3 class="card-title">
-            <a href="#" class="btn btn-primary btn-sm">
+            <a href="/anggota/tambah" class="btn btn-primary btn-sm">
                 <i class="fa fa-user-plus"></i> Tambah Data Anggota
             </a>
         </h3>
@@ -30,15 +30,13 @@
                 @forelse ($anggota as $data)
                     <tr>
                         <th scope="row">{{ $nomor++ }}</th>
-                        <td>{{ $data->namaanggota }}</td>
+                        <td>{{ $data->nama_anggota }}</td>
                         <td>{{ $data->alamat }}</td>
                         <td>{{ $data->nohp }}</td>
-                        <td>{{ $data->tanggaldaftar }}</td>
+                        <td>{{ $data->tgl_daftar }}</td>
                         <td>
 
-                             <a href="{{ route('#', $data->id) }}" class="btn btn-info btn-sm">
-                                <i class="fa fa-pen"></i>
-                            </a>
+                             <a href="/dosen/edit/{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 
 
                             <!-- Button trigger modal -->

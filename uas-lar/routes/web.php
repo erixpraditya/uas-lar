@@ -41,3 +41,5 @@ Route::delete('/perpus/{id}', [perpusController::class, 'destroy']);
 
 //Anggota
 Route::get('/anggota', [anggotaController::class, 'index']);
+Route::get('/anggota/tambah', [anggotaController::class, 'create']);
+Route::post('/anggota', [anggotaController::class, 'store']);
