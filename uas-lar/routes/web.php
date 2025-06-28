@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\anggotaController;
+use App\Http\Controllers\peminjamController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\perpusController;
@@ -46,3 +47,6 @@ Route::post('/anggota', [anggotaController::class, 'store']);
 Route::get('/anggota/edit/{id}', [anggotaController::class, 'edit'])->name('anggota.edit');
 Route::put('/anggota/{id}', [anggotaController::class, 'update']);
 Route::delete('/anggota/{id}', [anggotaController::class, 'destroy']);
+
+//Peminjam
+Route::get('/peminjam', [peminjamController::class, 'index']);
