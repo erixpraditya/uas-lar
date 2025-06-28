@@ -43,3 +43,6 @@ Route::delete('/perpus/{id}', [perpusController::class, 'destroy']);
 Route::get('/anggota', [anggotaController::class, 'index']);
 Route::get('/anggota/tambah', [anggotaController::class, 'create']);
 Route::post('/anggota', [anggotaController::class, 'store']);
+Route::get('/anggota/edit/{id}', [anggotaController::class, 'edit'])->name('anggota.edit');
+Route::put('/anggota/{id}', [anggotaController::class, 'update']);
+Route::delete('/anggota/{id}', [anggotaController::class, 'destroy']);

@@ -57,6 +57,8 @@ class anggotaController extends Controller
     public function edit(string $id)
     {
         //
+         $anggota = Anggota::find($id);
+        return view('anggota.edit',compact('anggota'));
     }
 
     /**
@@ -65,6 +67,14 @@ class anggotaController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $anggota = Anggota::find($id);
+        $anggota->nama_anggota = $request->nama_anggota;
+        $anggota->alamat = $request->alamat;
+        $anggota->nohp = $request->nohp;
+        $anggota->tgl_daftar = $request->tgl_daftar;
+        $anggota->save();
+
+        return redirect('/anggota');
     }
 
     /**
@@ -73,5 +83,9 @@ class anggotaController extends Controller
     public function destroy(string $id)
     {
         //
+        $anggota = Anggota::find($id);
+        $anggota->delete();
+
+        return redirect('/anggota');
     }
 }
