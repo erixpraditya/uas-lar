@@ -80,7 +80,7 @@
                 href="/peminjam" aria-expanded="false">
                 <div class="d-flex align-items-center gap-3">
                   <span class="d-flex">
-                    <i class="ti ti-shopping-cart"></i>
+                    <i class="fa-solid fa-arrows-rotate"></i>
                   </span>
                   <span class="hide-menu">Peminjam</span>
                 </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\anggotaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\perpusController;
@@ -30,9 +31,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//PerpusBuku
 Route::get('/perpus', [perpusController::class, 'index']);
 Route::get('/perpus/tambah', [perpusController::class, 'create']);
 Route::post('/perpus', [perpusController::class, 'store']);
 Route::get('/perpus/edit/{id}', [perpusController::class, 'edit'])->name('perpus.edit');
 Route::put('/perpus/{id}', [perpusController::class, 'update']);
 Route::delete('/perpus/{id}', [perpusController::class, 'destroy']);
+
+//Anggota
+Route::get('/anggota', [anggotaController::class, 'index']);

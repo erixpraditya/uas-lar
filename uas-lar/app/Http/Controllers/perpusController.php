@@ -9,7 +9,7 @@ class perpusController extends Controller
 {
     public function index()
     {
-         $nomor = 1;
+        $nomor = 1;
         $perpus = perpus::all();
         return view('Perpus.index', compact('perpus','nomor'));
     }
