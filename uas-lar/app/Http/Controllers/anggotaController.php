@@ -38,6 +38,9 @@ class anggotaController extends Controller
         $anggota->alamat = $request->alamat;
         $anggota->nohp = $request->nohp;
         $anggota->tgl_daftar = $request->tgl_daftar;
+        $anggota->foto = $request->foto->getClientOriginalName();
+
+        $request->foto->move('foto_mahasiswa',$request->foto->getClientOriginalName());
         $anggota->save();
 
         return redirect('/anggota');

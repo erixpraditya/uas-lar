@@ -31,7 +31,10 @@
                             <label for="exampleInputPassword1" class="form-label">Kategori</label>
                             <input type="text" name="kategori" value="{{$perpus->kategori}}" class="form-control" id="exampleInputPassword1">
                         </div>
-
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Foto</label>
+                            <input type="file" name="foto" class="form-control" id="exampleInputPassword1">
+                        </div>
                         <button type="submit" class="btn btn-primary">Edit</button>
                     </form>
                 </div>

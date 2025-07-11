@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('peminjams', function (Blueprint $table) {
             $table->id(); // atau $table->bigIncrements('id');
-            $table->bigInteger('bukus_id');
+            $table->bigInteger('perpuses_id');
             $table->bigInteger('anggotas_id');
             $table->string('tgl_pinjam', 100);
             $table->string('tgl_kembali', 100);

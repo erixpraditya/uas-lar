@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Anggota extends Model
 {
     use HasFactory;
+    public function peminjam(){
+        return $this->belongTo(Peminjam::class);
+    }
 }

@@ -37,6 +37,15 @@ class peminjamController extends Controller
     public function store(Request $request)
     {
         //
+        $peminjam = new Peminjam();
+        $peminjam->perpuses_id = $request->perpuses;
+        $peminjam->anggotas_id = $request->anggotas;
+        $peminjam->tgl_pinjam = $request->tgl_pinjam;
+        $peminjam->tgl_kembali = $request->tgl_kembali;
+        $peminjam->status = $request->status;
+        $peminjam->save();
+
+        return redirect('/peminjam');
     }
 
     /**

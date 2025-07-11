@@ -12,7 +12,7 @@
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Nama Buku</label>
-                            <select name="rumpun" id="" class="form-control">
+                            <select name="perpuses_id" id="" class="form-control">
                                 <option value="">-Pilih Buku-</option>
                                 @foreach ($perpus as $item)
                                     <option value="{{$item->id}}">{{$item->judul}}</option>
@@ -21,7 +21,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Nama Anggota</label>
-                            <select name="rumpun" id="" class="form-control">
+                            <select name="anggotas_id" id="" class="form-control">
                                 <option value="">-Pilih Anggota-</option>
                                 @foreach ($anggota as $item)
                                     <option value="{{$item->id}}">{{$item->nama_anggota}}</option>

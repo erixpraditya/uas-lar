@@ -39,7 +39,7 @@ class perpusController extends Controller
         $perpus->kategori = $request->kategori;
         $perpus->foto = $request->foto->getClientOriginalName();
 
-        $request->foto->move('foto_mahasiswa',$request->foto->getClientOriginalName());
+        $request->foto->move('foto_buku',$request->foto->getClientOriginalName());
         $perpus->save();
 
         return redirect('/perpus');
