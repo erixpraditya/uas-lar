@@ -50,3 +50,8 @@ Route::delete('/anggota/{id}', [anggotaController::class, 'destroy']);
 
 //Peminjam
 Route::get('/peminjam', [peminjamController::class, 'index']);
+Route::get('/peminjam/tambah', [peminjamController::class, 'create']);
+Route::post('/peminjam', [peminjamController::class, 'store']);
+Route::get('/peminjam/edit/{id}', [peminjamController::class, 'edit'])->name('peminjam.edit');
+Route::put('/peminjam/{id}', [peminjamController::class, 'update']);
+Route::delete('/peminjam/{id}', [peminjamController::class, 'destroy']);

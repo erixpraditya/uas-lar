@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('tahunterbit');
             $table->string('penerbit', 100);
             $table->string('kategori', 100);
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
 

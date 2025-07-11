@@ -37,6 +37,9 @@ class perpusController extends Controller
         $perpus->tahunterbit = $request->tahunterbit;
         $perpus->penerbit = $request->penerbit;
         $perpus->kategori = $request->kategori;
+        $perpus->foto = $request->foto->getClientOriginalName();
+
+        $request->foto->move('foto_mahasiswa',$request->foto->getClientOriginalName());
         $perpus->save();
 
         return redirect('/perpus');

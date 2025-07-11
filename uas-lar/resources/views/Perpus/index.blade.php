@@ -18,7 +18,7 @@
         <table class="table table-hover">
             <thead >
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Judul</th>
                     <th scope="col">Penulis</th>
                     <th scope="col">Tahun Terbit</th>
@@ -39,8 +39,8 @@
                         <td>
 
                              <a href="{{ route('perpus.edit', $data->id) }}" class="btn btn-info btn-sm">
-    <i class="fa fa-pen"></i>
-</a>
+                                <i class="fa fa-pen"></i>
+                             </a>
 
 
                             <!-- Button trigger modal -->

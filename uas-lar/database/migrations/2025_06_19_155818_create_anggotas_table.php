@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('alamat',100);
             $table->string('nohp',100);
             $table->string('tgl_daftar',100);
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

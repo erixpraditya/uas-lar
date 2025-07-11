@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Anggota;
 use App\Models\Peminjam;
+use App\Models\Perpus;
 use Illuminate\Http\Request;
 
 class peminjamController extends Controller
@@ -24,6 +26,9 @@ class peminjamController extends Controller
     public function create()
     {
         //
+        $perpus = Perpus::all();
+        $anggota = Anggota::all();
+        return view('Peminjam.form',compact('perpus', 'anggota'));
     }
 
     /**
