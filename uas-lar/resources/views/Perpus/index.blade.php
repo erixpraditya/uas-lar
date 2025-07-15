@@ -9,7 +9,7 @@
     <div class="card-header">
         <h3 class="card-title">
             <a href="/perpus/tambah" class="btn btn-primary btn-sm">
-                <i class="fa fa-user-plus"></i> Tambah Data Buku
+                <i class="fa-solid fa-book"></i> Tambah Data Buku
             </a>
         </h3>
     </div>
@@ -37,6 +37,50 @@
                         <td>{{ $data->penerbit }}</td>
                         <td>{{ $data->kategori }}</td>
                         <td>
+
+                            {{-- Detail --}}
+                            <!-- Perbaikan -->
+                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $data->id }}">
+                                <i class="fa fa-info"></i>
+                            </button>
+
+
+                                        <!-- Modal -->
+                                        <!-- Modal Detail -->
+                            <div class="modal fade" id="exampleModal{{ $data->id }}" tabindex="-1" aria-labelledby="exampleModalLabel{{ $data->id }}" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel{{ $data->id }}">Detail Buku</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="{{ asset('/foto_buku/'.$data->foto) }}" height="200" width="150" alt="">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Judul Buku</td>
+                                                        <td>: {{ $data->judul }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Penulis</td>
+                                                        <td>: {{ $data->penulis }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tahun Terbit</td>
+                                                        <td>: {{ $data->tahunterbit }}</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{-- End detail --}}
 
                              <a href="{{ route('perpus.edit', $data->id) }}" class="btn btn-info btn-sm">
                                 <i class="fa fa-pen"></i>
