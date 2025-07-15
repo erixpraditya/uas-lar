@@ -31,8 +31,8 @@
                 @forelse ($peminjam as $data)
                     <tr>
                         <th scope="row">{{ $nomor++ }}</th>
-                        <td>{{ $data->bukus_id }}</td>
-                        <td>{{ $data->anggotas_id }}</td>
+                        <td>{{ $data->perpus->judul }}</td>
+                        <td>{{ $data->anggota->nama_anggota }}</td>
                         <td>{{ $data->tgl_pinjam }}</td>
                         <td>{{ $data->tgl_kembali }}</td>
                         <td>{{ $data->status }}</td>
