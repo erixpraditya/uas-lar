@@ -62,6 +62,10 @@ class peminjamController extends Controller
     public function edit(string $id)
     {
         //
+        $peminjam = Peminjam::find($id);
+        $perpus = Perpus::all();
+        $anggota = Anggota::all();
+        return view('Peminjam.edit',compact('perpus','anggota','peminjam'));
     }
 
     /**
@@ -70,6 +74,15 @@ class peminjamController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $peminjam = Peminjam::find($id);
+        $peminjam->perpuses_id = $request->perpuses;
+        $peminjam->anggotas_id = $request->anggotas;
+        $peminjam->tgl_pinjam = $request->tgl_pinjam;
+        $peminjam->tgl_kembali = $request->tgl_kembali;
+        $peminjam->status = $request->status;
+        $peminjam->save();
+
+        return redirect('/peminjam');
     }
 
     /**
@@ -78,5 +91,9 @@ class peminjamController extends Controller
     public function destroy(string $id)
     {
         //
+        $peminjam = Peminjam::find($id);
+        $peminjam->delete();
+
+        return redirect('/peminjam');
     }
 }

@@ -18,7 +18,7 @@
         <table class="table table-hover">
             <thead >
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Nama Buku</th>
                     <th scope="col">Nama Anggota</th>
                     <th scope="col">Tanggal Pinjam</th>
@@ -38,7 +38,7 @@
                         <td>{{ $data->status }}</td>
                         <td>
 
-                             <a href="#{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                             <a href="/peminjam/edit/{{$data->id}}" class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 
 
 
@@ -56,11 +56,11 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Yakin ingin menghapus buku berjudul <strong>{{ $data->judul }}</strong>?
+                                            Yakin ingin menghapus data <strong>{{ $data->perpus->judul }}</strong>?
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <form action="/perpus/{{ $data->id }}" method="POST" class="d-inline">
+                                            <form action="/peminjam/{{ $data->id }}" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-danger">Hapus</button>
