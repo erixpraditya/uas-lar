@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\anggotaController;
+use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\peminjamController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -55,3 +56,6 @@ Route::post('/peminjam', [peminjamController::class, 'store']);
 Route::get('/peminjam/edit/{id}', [peminjamController::class, 'edit'])->name('peminjam.edit');
 Route::put('/peminjam/{id}', [peminjamController::class, 'update']);
 Route::delete('/peminjam/{id}', [peminjamController::class, 'destroy']);
+
+//Dashboard
+Route::get('/dashboard', [dashboardController::class, 'index']);
