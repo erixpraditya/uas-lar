@@ -10,7 +10,7 @@
 @section('content')
             <div class="card mt-5">
                 <div class="card-body">
-                <h5 class="card-title fw-semibold mb-4">HALOO ADMINN</h5>
+                <h5 class="card-title fw-semibold mb-4">HALOO ADMIN PUSTAKA NIRWANA</h5>
                 <p class="mb-0">Hi Admin Semoga harimu menyenangkan </p>
                 </div>
             </div>

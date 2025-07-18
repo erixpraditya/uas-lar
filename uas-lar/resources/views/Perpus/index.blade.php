@@ -70,6 +70,14 @@
                                                         <td>Tahun Terbit</td>
                                                         <td>: {{ $data->tahunterbit }}</td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Penerbit</td>
+                                                        <td>: {{ $data->penerbit }}</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Kategori</td>
+                                                        <td>: {{ $data->kategori }}</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>

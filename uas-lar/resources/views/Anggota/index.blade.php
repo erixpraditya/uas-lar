@@ -67,6 +67,10 @@
                                                         <td>No HP</td>
                                                         <td>: {{ $data->nohp }}</td>
                                                     </tr>
+                                                    <tr>
+                                                        <td>Tanggal Daftar</td>
+                                                        <td>: {{ $data->tgl_daftar }}</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>

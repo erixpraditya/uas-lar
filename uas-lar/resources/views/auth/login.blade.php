@@ -20,10 +20,15 @@
           <div class="col-md-8 col-lg-6 col-xxl-3">
             <div class="card mb-0">
               <div class="card-body">
+                <div class="text-center mb-3">
+                    <a href="/">
+                        <img src="{{ asset('/logo/logo.png') }}" alt="Logo Pustaka Nirwana" style="width: 150px; height: auto;">
+                    </a>
+                </div>
                 <p class="text-center">Silahkan Login Min</p>
                   <form method="POST" action="{{ route('login') }}">
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"> Username </label>
+                    <label for="exampleInputEmail1" class="form-label"> Email </label>
                              @csrf
                     <div class="input-group mb-3">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -38,11 +43,11 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
-            @error('password')
+                @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
-            @enderror
+                @enderror
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-4">
                     <div class="form-check">
@@ -54,9 +59,11 @@
                     </div>
                     <a class="text-primary fw-bold" href="#">Forgot Password ?</a>
                   </div>
-                  <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">{{ __('Login') }}</button>
-          </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary w-100">
+                        {{ __('Login') }}
+                    </button>
+                </div>
                 </form>
               </div>
             </div>
